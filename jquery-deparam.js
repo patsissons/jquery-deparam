@@ -6,6 +6,7 @@
         }
         module.exports = deparam(jquery);
     } else if (typeof define === 'function' && define.amd){
+        define('jquery', function() { return null; });
         define(['jquery'], function(jquery){
             return deparam(jquery);
         });
